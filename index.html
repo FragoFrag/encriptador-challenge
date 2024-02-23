@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text encryptor</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="title-bar">
+            <div class="img-alura-logo">
+                <img src="resources/logo.svg" alt="Logo de Alura">
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="encryptor">
+
+                <div class="input-area">
+
+                    <div class="input-box">
+                        <textarea id="txt-in" cols="30" rows="10" placeholder="Ingrese el texto aquí" required></textarea>
+                    </div>
+                    <div class="alert">
+                        <img id="icono-de-alerta" src="resources/bi_exclamation-circle-fill.svg" alt="Icono de alerta">
+                        <p class="txt-alert">  Sólo letras minúsculas y sin acentos.</p>
+                    </div>
+
+                    <div class="btn-set">
+                        <button onclick="encrypt();" class="encrypt-btn" disabled>Encriptar</button>
+                        <button onclick="decrypt();" class="decrypt-btn" disabled>Desencriptar</button>
+                    </div>
+                </div>
+
+                <div class="result-area">
+                    <div class="output-box">
+                        <p id="result-txt" hidden></p>
+                        <div id="doll-box">
+                            <img src="resources/muñeco.svg" alt="Muñeco inspeccionando un diamante" class="doll">
+                            <div class="default-txt">
+                                <h1 class="no-msg-txt">Ningún mensaje fue encontrado</h1>
+                                <p class="insert-txt">Ingresa el texto que desees encriptar o desencriptar</p>
+                            </div>
+
+                        </div>
+
+                        <div class="copy">
+                            <button onclick="copiar();" id="copy-btn" hidden>Copiar</button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
